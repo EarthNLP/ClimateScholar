@@ -1,13 +1,3 @@
-# What is this template?
-A simple repo with a single README meant to serve as a template for starting research projects. Use this template and fill in the questions below! Primarily aimed at CS research but apply to your own domain as needed 😁.
-
-The original idea was taken from [this](https://medium.com/@marcotcr/organizing-and-evaluating-research-ideas-e137637b599e) blog post.
-
-Some more advice before you get started:
-- [A 4-step system for your research paper strategy](https://www.youtube.com/watch?v=cxVi-uAM9_A)
-- [7 Time Management Tips for Academic Writers to Avoid Crunch Time before an Academic Deadline](https://www.youtube.com/watch?v=i1rTxi5Wfc4)
-- [Use the PEEL Technique to Structure your Paragraph Writing](https://www.youtube.com/watch?v=ErmYTPN23YI)
-
 # Research Outline:
 Use this section to set an outline and guiding vision describing your work. 
 
