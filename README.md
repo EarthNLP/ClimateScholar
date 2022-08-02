@@ -2,27 +2,32 @@
 Use this section to set an outline and guiding vision describing your work. 
 
 ### The Problem (What)
-- A brief description of the problem we're hoping to solve with our work.
+- A knowledge graph over envrionmental and climate science research abstracts.
 
 ### Why even do this? (Why)
-- An overview of why this would matter and why it is worth solving.
+- There is a huge amount of scientific research addressing climate change. The goal is to make it easier for researchers to work with that knowledge. Kind of like a "second brain"
 
 ### How do current approaches fail or fall short?
-- Come up with a list of current or related approaches and why they either won't work or underperform.
-- This also acts as a small lit review & can use to set up baselines for comparisons.
+- Not domain specific
+- Dont model climate science specific verbage in relations
 
 ### What does our solution look like?
-- Map what the solution is expcted to look like. This will likely change over the course of the project.
+- Use existing relation extraction systems (Holmes, PURE, DyGie++) over a subset of S2ORC
 
 ### When is the problem considered "solved"?
-- A general idea of what evaluation metrics will be used and in some cases what is the quantity required for it to be "solved".
+- The proposal will be a description of the system while the follow up paper will require a user review with scientists to see if the system works for them.
 
 ### What are potential pitfalls or known unknowns?
-- Outline what might cause the project to fail, whether that is incomplete knowledge, known shortcomings of your approach, or areas of high uncertainity. 
+- Poor data
+- Lack of domain knowledge
+- Lack of consistency in verbage used between entities to form pattern extractors
 
 ### What is the plan?
-- Create a list of steps and action items needed to get started working.
-- Consider using project management tools like Github's Issues or Project pages to help keep track of work. 
+- Download the S2ORC subset
+- Lit Review
+- Find a writing schedule for the paper
+- Go over abstracts to start determing some entities and relations
+- Determine which pre-existing RE system will be best to adapt to the task
 
 # Documentation
 Use this section to get a head start in ensuring your work is reproducible and readers hoping to apply your research can follow along with little hassle. 
