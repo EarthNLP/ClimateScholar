@@ -1,0 +1,12 @@
+numpy
+pandas
+spacy
+wikipedia-api
+bertopic
+flake8
+black
+mypy
+pre-commit
+fastapi
+git+https://github.com/boudinfl/pke.git
+mmda
