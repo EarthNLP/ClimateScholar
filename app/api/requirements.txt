@@ -3,3 +3,5 @@ black
 mypy
 pre-commit
 fastapi
+uvicorn
+neo4j

@@ -22,3 +22,8 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+@app.get("/test-ping")
+def pong():
+    """ Used to test if the API is alive """
+    return {"Hello": "World"}
