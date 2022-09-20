@@ -1,5 +1,13 @@
 import React, { useState } from "react";
 import { SearchBar } from "./Components/SearchBar";
+import {
+  RecoilRoot,
+  atom,
+  selector,
+  useRecoilState,
+  useRecoilValue,
+} from 'recoil';
+import ky from 'ky';
 
 // TODO: Fix the ugly bg issue
 /**
@@ -22,12 +30,14 @@ function App() {
   }
 
   return (
-    <div className="flex min-h-screen bg-white dark:bg-gray-700">
-      <header className="flex flex-col items-center justify-center flex-grow text-2xl dark:text-white">
-        <h1>ClimateScholar</h1>
-          <SearchBar />
-      </header>
-    </div>
+    <RecoilRoot>
+      <div className="flex min-h-screen">
+        <header className="flex flex-col items-center justify-center ">
+          <h1>ClimateScholar</h1>
+            <SearchBar />
+        </header>
+      </div>
+    </RecoilRoot>
   );
 }
 
