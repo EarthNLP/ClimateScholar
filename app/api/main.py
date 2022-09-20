@@ -3,6 +3,7 @@ from fastapi import Body, Request, FastAPI, HTTPException
 from pydantic import BaseModel
 from fastapi.responses import FileResponse
 from fastapi.middleware.cors import CORSMiddleware
+from neo4j import GraphDatabase
 
 app = FastAPI()
 
