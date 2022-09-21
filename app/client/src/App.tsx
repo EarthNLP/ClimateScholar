@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { FullTextSearchBar } from "./Components/SearchBar";
 import {
-  RecoilRoot,
   atom,
   selector,
   useRecoilState,
@@ -10,8 +9,9 @@ import {
 import { SearchResults } from "./Components/SearchResults";
 import { useTabs, TabPanel } from "react-headless-tabs";
 import { TabSelector } from "./Components/TabSelector";
+import { EntitySearch } from "./Components/EntitySearch";
 
-enum SearchTabs {
+export enum SearchTabs {
   FullText = "Text Search",
   EntitySearch = "Entity Connection Search"
 }
@@ -40,13 +40,22 @@ function App(): JSX.Element {
     }
   }
 
-  const [textSearchResults, setTextSearchResults] = useRecoilState(textSearchResultsAtom);
+  // Local State
   const [resultsLoaded, setResultsLoaded] = useState<boolean>(false);
+  const [entitiesLoaded, setEntitiesLoaded] = useState<boolean>(false);
+  const [entities, setEntities] = useState<string[]>([]);
   const [selectedTab, setSelectedTab] = useTabs([
     SearchTabs.FullText,
     SearchTabs.EntitySearch
   ]);
-  const [searchTab, setSearchTab] = useState<SearchTabs>(SearchTabs.FullText);
+
+  // Recoil State
+  const [textSearchResults, setTextSearchResults] = useRecoilState(textSearchResultsAtom);
+
+  useEffect(() => {
+    
+  })
+  
 
   useEffect(() => {
     console.log("Text Search Changed: " + JSON.stringify(textSearchResults));
@@ -78,7 +87,7 @@ function App(): JSX.Element {
             </TabSelector>
           </nav>
             <TabPanel hidden={selectedTab !== SearchTabs.FullText}><FullTextSearchBar /></TabPanel>
-            <TabPanel hidden={selectedTab !== SearchTabs.EntitySearch}>Company</TabPanel>
+            <TabPanel hidden={selectedTab !== SearchTabs.EntitySearch}><EntitySearch entities={entities} /></TabPanel>
         </>
           
           {resultsLoaded ? <SearchResults /> : <></>}

@@ -1,20 +1,20 @@
 import React from "react";
-import { useRecoilState } from "recoil";
-import { textSearchResultsAtom } from "../App";
-import { CardResult } from "./CardResult";
+import { SearchTabs } from "../App";
+import { FullTextResults } from "./FullTextResults";
+
+interface ISearchResults {
+    searchTab: SearchTabs
+}
 
 /**
  * 
+ * @param props 
  * @returns 
  */
-export function SearchResults(): JSX.Element {
-
-    const [textSearchResults, setTextSearchResults] = useRecoilState(textSearchResultsAtom);
-
-
+export function SearchResults(props: ISearchResults): JSX.Element {
     return (
-        <div className="card-list">
-            {textSearchResults.map((result) => <CardResult title={result["n"]["title"]} abstract={(result["n"]["abstract"] as string)} />)}
+        <div>
+            {props.searchTab === SearchTabs.FullText ? <FullTextResults/> : <></>}
         </div>
     );
 }

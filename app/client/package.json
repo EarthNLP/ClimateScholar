@@ -9,6 +9,7 @@
     "format": "prettier --write \"./**/*.{ts,tsx}\""
   },
   "dependencies": {
+    "azure-devops-ui": "^2.167.46",
     "formik": "^2.2.9",
     "ky": "^0.31.3",
     "react": "~17.0.2",
