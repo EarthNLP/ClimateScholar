@@ -4,6 +4,7 @@ from pydantic import BaseModel
 from fastapi.responses import FileResponse
 from fastapi.middleware.cors import CORSMiddleware
 from neo4j import GraphDatabase
+import pandas as pd
 
 app = FastAPI(debug=True)
 
@@ -39,7 +40,7 @@ class EntitySearchRequest(BaseModel):
 def get_all_ents_cypher(tx):
     results = tx.run("MATCH (e:Entity) RETURN e")
 
-    return [ent['entity_name'] for ent in results]
+    return [ent["e"]["entity_name"] for ent in results.data()]
 
 def get_all_authors_cypher(tx):
     results = tx.run("MATCH (a:Author) RETURN a")
@@ -52,18 +53,27 @@ def get_all_topics_cypher(tx):
     return [topic['topic_name'] for topic in results]
 
 def text_search_cypher(tx, searchString: str):
-    print("In the func")
     results = tx.run("MATCH (n:Paper) WHERE n.abstract CONTAINS $searchString OR n.title CONTAINS $searchString RETURN n LIMIT 10", searchString=searchString)
-    
+
     return results.data()
 
 def ent_search_cypher(tx, ent1: str, ent2: str):
+
     results = tx.run("MATCH (a:Entity {entity_name: $ent1}), (b:Entity {entity_name: $ent2}), p = shortestPath((a)-[*]-(b))RETURN p", ent1=ent1, ent2=ent2)
     
+    nodeDict = results.graph()._nodes
+    edgesDict = results.graph()._relationships
+    
+    for node, relationship in zip(results.graph()._nodes, results.graph()._relationships):
+        # TODO: There needs to be a cleaner way of accessing a frozenset
+        node_label, *_ = nodeDict[node].labels
+        #node_properties = nodeDict[node].properties
+        print(f"relationship: {relationship}, edgesDict[relationship]: {edgesDict[relationship]}")
+
     return results.data()
 
 @app.get("/test-ping")
-def pong():
+async def pong():
     """ Used to test if the API is alive """
     return {"Hello": "World"}
 
@@ -86,19 +96,19 @@ async def text_search(searchRequest: dict = Body(...)):
     return {"results": results}
 
 @app.post("/ent-search")
-def ent_search(searchRequest: EntitySearchRequest):
+async def ent_search(searchRequest: dict = Body(...)):
     """ Used to find the shortest path between two entities in the graph  """
     results = {}
 
     with driver.session() as session:
-        results = session.execute_read(ent_search_cypher, searchRequest.entity1, searchRequest.entity2)
+        results = session.execute_read(ent_search_cypher, searchRequest["entity1"], searchRequest["entity2"])
 
     driver.close()
 
     return {"results": results}
 
 @app.get("/get-all-fields")
-def get_all_fields():
+async def get_all_fields():
     """ Used to grab all entities, authors, and topics for use in populating the ent search dropdown  """
     ents = []
     topics = []
@@ -106,8 +116,8 @@ def get_all_fields():
 
     with driver.session() as session:
         ents = session.execute_read(get_all_ents_cypher)
-        topics = session.execute_read(get_all_topics_cypher)
-        authors = session.execute_read(get_all_authors_cypher)
+        #topics = session.execute_read(get_all_topics_cypher)
+        #authors = session.execute_read(get_all_authors_cypher)
 
     driver.close()
 

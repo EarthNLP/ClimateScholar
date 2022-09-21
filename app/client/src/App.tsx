@@ -10,6 +10,7 @@ import { SearchResults } from "./Components/SearchResults";
 import { useTabs, TabPanel } from "react-headless-tabs";
 import { TabSelector } from "./Components/TabSelector";
 import { EntitySearch } from "./Components/EntitySearch";
+import ky from "ky";
 
 export enum SearchTabs {
   FullText = "Text Search",
@@ -20,6 +21,24 @@ export const textSearchResultsAtom = atom({
   key: 'textSearchResults',
   default: [],
 });
+
+export const entityConnectionResultsAtom = atom({
+  key: 'entityConnectionResultsAtom',
+  default: [],
+});
+
+export const dbEntitiesAtom = atom({
+  key: 'dbEntitiesAtom',
+  default: [],
+});
+
+export const dbEntitiesSelector = selector({
+  key: 'dbEntitiesSelector',
+  get: async ({get}) => {
+    const response = await ky.get('http://127.0.0.1:8000/get-all-fields').json();
+    return (response as any)["ents"];
+}});
+
 
 /**
  * 
@@ -42,8 +61,7 @@ function App(): JSX.Element {
 
   // Local State
   const [resultsLoaded, setResultsLoaded] = useState<boolean>(false);
-  const [entitiesLoaded, setEntitiesLoaded] = useState<boolean>(false);
-  const [entities, setEntities] = useState<string[]>([]);
+
   const [selectedTab, setSelectedTab] = useTabs([
     SearchTabs.FullText,
     SearchTabs.EntitySearch
@@ -51,11 +69,7 @@ function App(): JSX.Element {
 
   // Recoil State
   const [textSearchResults, setTextSearchResults] = useRecoilState(textSearchResultsAtom);
-
-  useEffect(() => {
-    
-  })
-  
+  const entities = useRecoilValue(dbEntitiesSelector);
 
   useEffect(() => {
     console.log("Text Search Changed: " + JSON.stringify(textSearchResults));
