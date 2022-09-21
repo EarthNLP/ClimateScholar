@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FullTextSearchBar } from "./Components/SearchBar";
 import {
   RecoilRoot,
@@ -7,14 +7,18 @@ import {
   useRecoilState,
   useRecoilValue,
 } from 'recoil';
-import ky from 'ky';
+import { SearchResults } from "./Components/SearchResults";
 
-// TODO: Fix the ugly bg issue
+export const textSearchResultsAtom = atom({
+  key: 'textSearchResults',
+  default: [],
+});
+
 /**
  * 
  * @returns 
  */
-function App() {
+function App(): JSX.Element {
   function toggleDarkMode() {
     if (
       localStorage.theme === "dark" ||
@@ -29,13 +33,26 @@ function App() {
     }
   }
 
+  const [textSearchResults, setTextSearchResults] = useRecoilState(textSearchResultsAtom);
+  const [resultsLoaded, setResultsLoaded] = useState<boolean>(false);
+
+  useEffect(() => {
+    console.log("Text Search Changed: " + JSON.stringify(textSearchResults));
+    
+    if (Object.keys(textSearchResults).length >= 1) {
+      setResultsLoaded(true);
+    }
+    
+  }, [textSearchResults]);
+
+
+
   return (
-    <RecoilRoot>
-      <div className="app">
+      <div className={resultsLoaded ? "results-loaded-app" :"default-app"}>
           <h1>ClimateScholar</h1>
             <FullTextSearchBar />
+            {resultsLoaded ? <SearchResults /> : <></>}
       </div>
-    </RecoilRoot>
   );
 }
 
