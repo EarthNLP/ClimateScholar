@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { SearchBar } from "./Components/SearchBar";
+import { FullTextSearchBar } from "./Components/SearchBar";
 import {
   RecoilRoot,
   atom,
@@ -31,11 +31,9 @@ function App() {
 
   return (
     <RecoilRoot>
-      <div className="flex min-h-screen">
-        <header className="flex flex-col items-center justify-center ">
+      <div className="app">
           <h1>ClimateScholar</h1>
-            <SearchBar />
-        </header>
+            <FullTextSearchBar />
       </div>
     </RecoilRoot>
   );
