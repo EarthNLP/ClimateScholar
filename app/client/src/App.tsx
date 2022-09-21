@@ -11,6 +11,7 @@ import { useTabs, TabPanel } from "react-headless-tabs";
 import { TabSelector } from "./Components/TabSelector";
 import { EntitySearch } from "./Components/EntitySearch";
 import ky from "ky";
+import { EntityGraphResults } from "./Components/EntitySearchResults";
 
 export enum SearchTabs {
   FullText = "Text Search",
@@ -68,17 +69,17 @@ function App(): JSX.Element {
   ]);
 
   // Recoil State
-  const [textSearchResults, setTextSearchResults] = useRecoilState(textSearchResultsAtom);
+  const textSearchResults = useRecoilValue(textSearchResultsAtom);
+  const entityNodes = useRecoilValue(entityConnectionResultsAtom);
   const entities = useRecoilValue(dbEntitiesSelector);
 
   useEffect(() => {
-    console.log("Text Search Changed: " + JSON.stringify(textSearchResults));
     
-    if (Object.keys(textSearchResults).length >= 1) {
+    if (Object.keys(textSearchResults).length >= 1 || Object.keys(entityNodes).length >= 1) {
       setResultsLoaded(true);
-    }
+    } 
     
-  }, [textSearchResults]);
+  }, [textSearchResults, entityNodes]);
 
 
 
@@ -104,7 +105,7 @@ function App(): JSX.Element {
             <TabPanel hidden={selectedTab !== SearchTabs.EntitySearch}><EntitySearch entities={entities} /></TabPanel>
         </>
           
-          {resultsLoaded ? <SearchResults /> : <></>}
+          {resultsLoaded ? <SearchResults searchTab={selectedTab as SearchTabs} /> : <></>}
       </div>
   );
 }

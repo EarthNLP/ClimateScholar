@@ -1,0 +1,164 @@
+ent-search: {
+    "results": [
+        {
+            "data": {
+                "id": "1190",
+                "abstract": "The mitochondrial theory of ageing proposes that the cumulative effect of biochemical damage in mitochondria causes mitochondrial mutations and plays a key role in ageing. Numerous studies have applied comparative approaches to test one of the predictions of the theory: That the rate of mitochondrial mutations is negatively correlated with longevity. Comparative studies face three challenges in detecting correlates of mutation rate: Covariation of mutation rates between species due to ancestry, covariation between life-history traits, and difficulty obtaining accurate estimates of mutation rate. We address these challenges using a novel Poisson regression method to examine the link between mutation rate and lifespan in rockfish (Sebastes). This method has better performance than traditional sister-species comparisons when sister species are too recently diverged to give reliable estimates of mutation rate. Rockfish are an ideal model system: They have long life spans with indeterminate growth and little evidence of senescence, which minimizes the confounding tradeoffs between lifespan and fecundity. We show that lifespan in rockfish is negatively correlated to rate of mitochondrial mutation, but not the rate of nuclear mutation. The life history of rockfish allows us to conclude that this relationship is unlikely to be driven by the tradeoffs between longevity and fecundity, or by the frequency of DNA replications in the germline. Instead, the relationship is compatible with the hypothesis that mutation rates are reduced by selection in long-lived taxa to reduce the chance of mitochondrial damage over its lifespan, consistent with the mitochondrial theory of ageing.",
+                "label": "Longevity Is Linked to Mitochondrial Mutation Rates in Rockfish: A Test Using Poisson Regression."
+            }
+        },
+        {
+            "data": {
+                "source": "1190",
+                "target": "1070",
+                "label": "HAS_KEYWORD"
+            }
+        },
+        {
+            "data": {
+                "id": "1070",
+                "label": "rockfish"
+            }
+        },
+        {
+            "data": {
+                "id": "1190",
+                "abstract": "The mitochondrial theory of ageing proposes that the cumulative effect of biochemical damage in mitochondria causes mitochondrial mutations and plays a key role in ageing. Numerous studies have applied comparative approaches to test one of the predictions of the theory: That the rate of mitochondrial mutations is negatively correlated with longevity. Comparative studies face three challenges in detecting correlates of mutation rate: Covariation of mutation rates between species due to ancestry, covariation between life-history traits, and difficulty obtaining accurate estimates of mutation rate. We address these challenges using a novel Poisson regression method to examine the link between mutation rate and lifespan in rockfish (Sebastes). This method has better performance than traditional sister-species comparisons when sister species are too recently diverged to give reliable estimates of mutation rate. Rockfish are an ideal model system: They have long life spans with indeterminate growth and little evidence of senescence, which minimizes the confounding tradeoffs between lifespan and fecundity. We show that lifespan in rockfish is negatively correlated to rate of mitochondrial mutation, but not the rate of nuclear mutation. The life history of rockfish allows us to conclude that this relationship is unlikely to be driven by the tradeoffs between longevity and fecundity, or by the frequency of DNA replications in the germline. Instead, the relationship is compatible with the hypothesis that mutation rates are reduced by selection in long-lived taxa to reduce the chance of mitochondrial damage over its lifespan, consistent with the mitochondrial theory of ageing.",
+                "label": "Longevity Is Linked to Mitochondrial Mutation Rates in Rockfish: A Test Using Poisson Regression."
+            }
+        },
+        {
+            "data": {
+                "source": "1190",
+                "target": "944",
+                "label": "IN_TOPIC"
+            }
+        },
+        {
+            "data": {
+                "id": "944",
+                "label": "rockfish_fish_dietary_protein_species_sebastes_fed_diets_levels_rockfish sebastes"
+            }
+        },
+        {
+            "data": {
+                "id": "1221",
+                "abstract": "Over thirty five species of rockfish are found along Canada’s Pacific coast, some of which have been considered for listing under Canada’s Species at Risk Act. We estimate Canadians’ welfare for recovery of a representative Pacific rockfish species using referendum-style stated preference methods administered to a sample of the Canadian public via an internet panel. Hypothetical recovery programs were presented as options to a baseline of current management measures. The programs resulted in varying long term outcomes distinguished by species’ future population projections. An increase in household taxes for a fixed ten year period was employed as the proposed payment mechanism. The econometric analysis found positive and significant welfare measures for all management programs, as well as sensitivity to scope. Willingness to pay ranged from $48 - $180 per year per household depending on the recovery program valued. Welfare measures were found to differ significantly between those who believed their responses to be consequential and those who did not. The former provided measures that were significantly higher than the latter. We conclude with a discussion of the findings in relation to recent literature on consequentiality and incentive compatibility of stated preference questions.",
+                "label": "Recovering Pacific rockfish at risk: the economic valuation of management actions"
+            }
+        },
+        {
+            "data": {
+                "source": "1221",
+                "target": "944",
+                "label": "IN_TOPIC"
+            }
+        },
+        {
+            "data": {
+                "id": "944",
+                "label": "rockfish_fish_dietary_protein_species_sebastes_fed_diets_levels_rockfish sebastes"
+            }
+        },
+        {
+            "data": {
+                "id": "1221",
+                "abstract": "Over thirty five species of rockfish are found along Canada’s Pacific coast, some of which have been considered for listing under Canada’s Species at Risk Act. We estimate Canadians’ welfare for recovery of a representative Pacific rockfish species using referendum-style stated preference methods administered to a sample of the Canadian public via an internet panel. Hypothetical recovery programs were presented as options to a baseline of current management measures. The programs resulted in varying long term outcomes distinguished by species’ future population projections. An increase in household taxes for a fixed ten year period was employed as the proposed payment mechanism. The econometric analysis found positive and significant welfare measures for all management programs, as well as sensitivity to scope. Willingness to pay ranged from $48 - $180 per year per household depending on the recovery program valued. Welfare measures were found to differ significantly between those who believed their responses to be consequential and those who did not. The former provided measures that were significantly higher than the latter. We conclude with a discussion of the findings in relation to recent literature on consequentiality and incentive compatibility of stated preference questions.",
+                "label": "Recovering Pacific rockfish at risk: the economic valuation of management actions"
+            }
+        },
+        {
+            "data": {
+                "source": "1221",
+                "target": "1224",
+                "label": "HAS_KEYWORD"
+            }
+        },
+        {
+            "data": {
+                "id": "1224",
+                "label": "species"
+            }
+        },
+        {
+            "data": {
+                "id": "1630",
+                "abstract": "Ecological changes in the phenology and distribution of plants and animals are occurring in all well-studied marine, freshwater, and terrestrial groups. These observed changes are heavily biased in the directions predicted from global warming and have been linked to local or regional climate change through correlations between climate and biological variation, field and laboratory experiments, and physiological research. Range-restricted species, particularly polar and mountaintop species, show severe range contractions and have been the first groups in which entire species have gone extinct due to recent climate change. Tropical coral reefs and amphibians have been most negatively affected. Predator-prey and plant-insect interactions have been disrupted when interacting species have responded differently to warming. Evolutionary adaptations to warmer conditions have occurred in the interiors of species’ ranges, and resource use and dispersal have evolved rapidly at expanding range margins. Observed genetic shifts modulate local effects of climate change, but there is little evidence that they will mitigate negative effects at the species level.",
+                "label": "Ecological and Evolutionary Responses to Recent Climate Change"
+            }
+        },
+        {
+            "data": {
+                "source": "1630",
+                "target": "1224",
+                "label": "HAS_KEYWORD"
+            }
+        },
+        {
+            "data": {
+                "id": "1224",
+                "label": "species"
+            }
+        },
+        {
+            "data": {
+                "id": "1630",
+                "abstract": "Ecological changes in the phenology and distribution of plants and animals are occurring in all well-studied marine, freshwater, and terrestrial groups. These observed changes are heavily biased in the directions predicted from global warming and have been linked to local or regional climate change through correlations between climate and biological variation, field and laboratory experiments, and physiological research. Range-restricted species, particularly polar and mountaintop species, show severe range contractions and have been the first groups in which entire species have gone extinct due to recent climate change. Tropical coral reefs and amphibians have been most negatively affected. Predator-prey and plant-insect interactions have been disrupted when interacting species have responded differently to warming. Evolutionary adaptations to warmer conditions have occurred in the interiors of species’ ranges, and resource use and dispersal have evolved rapidly at expanding range margins. Observed genetic shifts modulate local effects of climate change, but there is little evidence that they will mitigate negative effects at the species level.",
+                "label": "Ecological and Evolutionary Responses to Recent Climate Change"
+            }
+        },
+        {
+            "data": {
+                "source": "1630",
+                "target": "326",
+                "label": "IN_TOPIC"
+            }
+        },
+        {
+            "data": {
+                "id": "326",
+                "label": "rewilding_species_elephant_conservation_human_wild_restoration_elephants_herbivores_tourism"
+            }
+        },
+        {
+            "data": {
+                "id": "818",
+                "abstract": "Chinese yew (Taxus wallichiana var. mairei) is ranked as a rare and endangered plant of first-grade protection of China. It has been widely cultivated in 17 provinces of China over the past few decades. However, little is known about the dispersion, rewilding, and ecological influence of Chinese yew’s offspring during cultivation. Here, we report a noteworthy case of this species, via ex situ conservation, which has successfully spread into different secondary forests, thus forming a stable regenerating population in eastern China. The establishment of this yew population, which has > 900 individuals and 7 ha area, can be ascribed to two key ecological factors: (1) secondary forest near the parent yews that provided suitable microhabitats in which progeny yews could germinate and grow, and (2) seed-foraging and transportation by native birds. Thus, this case may offer a pathway for conserving endangered Chinese Taxus species, which can attract frugivorous birds to disperse their seeds. In addition, it is necessary to monitor the growth performance of progeny population in the field.",
+                "label": "A noteworthy case of rewilding Chinese yew from a garden population in eastern China"
+            }
+        },
+        {
+            "data": {
+                "source": "818",
+                "target": "326",
+                "label": "IN_TOPIC"
+            }
+        },
+        {
+            "data": {
+                "id": "326",
+                "label": "rewilding_species_elephant_conservation_human_wild_restoration_elephants_herbivores_tourism"
+            }
+        },
+        {
+            "data": {
+                "id": "818",
+                "abstract": "Chinese yew (Taxus wallichiana var. mairei) is ranked as a rare and endangered plant of first-grade protection of China. It has been widely cultivated in 17 provinces of China over the past few decades. However, little is known about the dispersion, rewilding, and ecological influence of Chinese yew’s offspring during cultivation. Here, we report a noteworthy case of this species, via ex situ conservation, which has successfully spread into different secondary forests, thus forming a stable regenerating population in eastern China. The establishment of this yew population, which has > 900 individuals and 7 ha area, can be ascribed to two key ecological factors: (1) secondary forest near the parent yews that provided suitable microhabitats in which progeny yews could germinate and grow, and (2) seed-foraging and transportation by native birds. Thus, this case may offer a pathway for conserving endangered Chinese Taxus species, which can attract frugivorous birds to disperse their seeds. In addition, it is necessary to monitor the growth performance of progeny population in the field.",
+                "label": "A noteworthy case of rewilding Chinese yew from a garden population in eastern China"
+            }
+        },
+        {
+            "data": {
+                "source": "818",
+                "target": "821",
+                "label": "HAS_KEYWORD"
+            }
+        },
+        {
+            "data": {
+                "id": "821",
+                "label": "china"
+            }
+        }
+    ]
+}
