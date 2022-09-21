@@ -1,0 +1,7 @@
+flake8
+black
+mypy
+pre-commit
+fastapi
+uvicorn
+neo4j
