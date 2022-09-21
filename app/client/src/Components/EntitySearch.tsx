@@ -1,7 +1,6 @@
 import * as React from "react";
 import { Dropdown } from "azure-devops-ui/Dropdown";
 import { DropdownSelection } from "azure-devops-ui/Utilities/DropdownSelection";
-import { dropdownItems } from "./Data";
 import { useRef } from "react";
 import { Button } from "azure-devops-ui/Button";
 import ky from "ky";
