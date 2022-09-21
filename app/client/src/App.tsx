@@ -8,6 +8,13 @@ import {
   useRecoilValue,
 } from 'recoil';
 import { SearchResults } from "./Components/SearchResults";
+import { useTabs, TabPanel } from "react-headless-tabs";
+import { TabSelector } from "./Components/TabSelector";
+
+enum SearchTabs {
+  FullText = "Text Search",
+  EntitySearch = "Entity Connection Search"
+}
 
 export const textSearchResultsAtom = atom({
   key: 'textSearchResults',
@@ -35,6 +42,11 @@ function App(): JSX.Element {
 
   const [textSearchResults, setTextSearchResults] = useRecoilState(textSearchResultsAtom);
   const [resultsLoaded, setResultsLoaded] = useState<boolean>(false);
+  const [selectedTab, setSelectedTab] = useTabs([
+    SearchTabs.FullText,
+    SearchTabs.EntitySearch
+  ]);
+  const [searchTab, setSearchTab] = useState<SearchTabs>(SearchTabs.FullText);
 
   useEffect(() => {
     console.log("Text Search Changed: " + JSON.stringify(textSearchResults));
@@ -50,8 +62,26 @@ function App(): JSX.Element {
   return (
       <div className={resultsLoaded ? "results-loaded-app" :"default-app"}>
           <h1>ClimateScholar</h1>
-            <FullTextSearchBar />
-            {resultsLoaded ? <SearchResults /> : <></>}
+          <>
+          <nav className="flex border-b border-gray-300">
+            <TabSelector
+              isActive={selectedTab === SearchTabs.FullText}
+              onClick={() => setSelectedTab(SearchTabs.FullText)}
+            >
+              {SearchTabs.FullText}
+            </TabSelector>
+            <TabSelector
+              isActive={selectedTab === SearchTabs.EntitySearch}
+              onClick={() => setSelectedTab(SearchTabs.EntitySearch)}
+            >
+              {SearchTabs.EntitySearch}
+            </TabSelector>
+          </nav>
+            <TabPanel hidden={selectedTab !== SearchTabs.FullText}><FullTextSearchBar /></TabPanel>
+            <TabPanel hidden={selectedTab !== SearchTabs.EntitySearch}>Company</TabPanel>
+        </>
+          
+          {resultsLoaded ? <SearchResults /> : <></>}
       </div>
   );
 }
