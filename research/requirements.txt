@@ -10,3 +10,4 @@ pre-commit
 fastapi
 git+https://github.com/boudinfl/pke.git
 concise-concepts
+gensim
