@@ -1,6 +1,8 @@
 # OpenNRE isnt avail as a package yet so manual install https://github.com/thunlp/OpenNRE#install
 OpenNRE/
 
+research/matching_patterns.json
+
 # A wvenv to differeiniate beteen windows and non-windows virutal environments
 wvenv/
 
