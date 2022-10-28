@@ -9,3 +9,6 @@ mypy
 pre-commit
 fastapi
 git+https://github.com/boudinfl/pke.git
+concise-concepts==0.6.2
+gensim
+neo4j
