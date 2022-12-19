@@ -12,3 +12,10 @@ git+https://github.com/boudinfl/pke.git
 gensim
 neo4j
 sentencegraph
+coreferee
+textacy
+torch
+transformers
+evaluate
+datasets
+zshot
