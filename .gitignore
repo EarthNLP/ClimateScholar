@@ -2,6 +2,7 @@
 OpenNRE/
 
 research/matching_patterns.json
+research/models/climate_scholar_specter
 
 # A wvenv to differeiniate beteen windows and non-windows virutal environments
 wvenv/
