@@ -137,3 +137,4 @@ dmypy.json
 # Pyre type checker
 .pyre/
 research/data/topic_ent_dict_checkpoint.pkl
+research/data/topic_ent_dict_checkpoint.pkl
