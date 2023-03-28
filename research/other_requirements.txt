@@ -1,0 +1,7 @@
+keybert
+bertopic
+nbformat>=4.2.0
+scikit-learn
+git+https://github.com/scikit-learn-contrib/hdbscan
+numpy
+pandas
