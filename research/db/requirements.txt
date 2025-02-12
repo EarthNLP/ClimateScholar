@@ -1,6 +1,0 @@
-flake8
-black
-mypy
-pre-commit
-neo4j
-jupyter
